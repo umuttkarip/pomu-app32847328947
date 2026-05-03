@@ -68,7 +68,7 @@ export function DemoFeedback({ name }: Props) {
       <div style={{
         fontFamily: "'Nunito', sans-serif",
         background: '#F6FBFA',
-        minHeight: '844px', width: '390px',
+        minHeight: '100dvh', width: '390px',
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
         padding: '0 32px', textAlign: 'center', gap: 16,
       }}>
@@ -86,7 +86,7 @@ export function DemoFeedback({ name }: Props) {
     <div style={{
       fontFamily: "'Nunito', sans-serif",
       background: '#F6FBFA',
-      minHeight: '844px', width: '390px',
+      minHeight: '100dvh', width: '390px',
       display: 'flex', flexDirection: 'column',
       overflowY: 'auto',
     }}>

@@ -40,7 +40,7 @@ export function DemoHome({ name, taskAdded, onAddTask, onTabChange, onStartFocus
     <div style={{
       fontFamily: "'Nunito', sans-serif",
       background: '#F6FBFA',
-      minHeight: '844px', width: '390px',
+      minHeight: '100dvh', width: '390px',
       position: 'relative', display: 'flex', flexDirection: 'column',
     }}>
 

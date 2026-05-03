@@ -51,7 +51,7 @@ export function DemoWelcome({ onComplete }: Props) {
       <div style={{
         fontFamily: "'Nunito', sans-serif",
         background: 'linear-gradient(160deg, #D9EFEC 0%, #EDF6F4 40%, #F6FBFA 100%)',
-        minHeight: '844px', width: '390px',
+        minHeight: '100dvh', width: '390px',
         display: 'flex', flexDirection: 'column', alignItems: 'center',
         position: 'relative', overflow: 'hidden',
         ...pageMotion,
@@ -111,7 +111,7 @@ export function DemoWelcome({ onComplete }: Props) {
       <div style={{
         fontFamily: "'Nunito', sans-serif",
         background: '#F6FBFA',
-        minHeight: '844px', width: '390px',
+        minHeight: '100dvh', width: '390px',
         display: 'flex', flexDirection: 'column',
         position: 'relative', overflow: 'hidden',
         ...pageMotion,
@@ -180,7 +180,7 @@ export function DemoWelcome({ onComplete }: Props) {
     <div style={{
       fontFamily: "'Nunito', sans-serif",
       background: 'linear-gradient(160deg, #D9EFEC 0%, #EDF6F4 40%, #F6FBFA 100%)',
-      minHeight: '844px', width: '390px',
+      minHeight: '100dvh', width: '390px',
       display: 'flex', flexDirection: 'column', alignItems: 'center',
       position: 'relative', overflow: 'hidden',
       ...pageMotion,

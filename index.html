@@ -11,8 +11,9 @@
     <style>
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
       html, body { height: 100%; background: #E8F0EE; }
-      body { font-family: 'Nunito', sans-serif; -webkit-font-smoothing: antialiased; }
-      #root { min-height: 100vh; display: flex; justify-content: center; }
+      html { height: -webkit-fill-available; }
+      body { font-family: 'Nunito', sans-serif; -webkit-font-smoothing: antialiased; min-height: -webkit-fill-available; }
+      #root { min-height: 100dvh; display: flex; justify-content: center; }
       button { font-family: 'Nunito', sans-serif; }
       input { font-family: 'Nunito', sans-serif; }
       ::-webkit-scrollbar { display: none; }

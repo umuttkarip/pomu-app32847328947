@@ -15,7 +15,7 @@ export function DemoStats({ onTabChange, onViewMemory }: Props) {
     <div style={{
       fontFamily: "'Nunito', sans-serif",
       background: '#F6FBFA',
-      minHeight: '844px', width: '390px',
+      minHeight: '100dvh', width: '390px',
       display: 'flex', flexDirection: 'column',
       position: 'relative',
     }}>

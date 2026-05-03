@@ -127,7 +127,7 @@ export function FocusTimer({ task, onClose }: Props) {
     <div style={{
       fontFamily: "'Nunito', sans-serif",
       background: bgColor,
-      minHeight: '844px', width: '390px',
+      minHeight: '100dvh', width: '390px',
       overflow: 'hidden', position: 'relative',
       display: 'flex', flexDirection: 'column', alignItems: 'center',
     }}>

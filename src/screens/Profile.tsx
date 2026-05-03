@@ -95,7 +95,7 @@ export function Profile({ onTabChange }: Props) {
     <div style={{
       fontFamily: "'Nunito', sans-serif",
       background: '#F6FBFA',
-      minHeight: '844px', width: '390px',
+      minHeight: '100dvh', width: '390px',
       overflow: 'hidden', position: 'relative',
       display: 'flex', flexDirection: 'column',
     }}>

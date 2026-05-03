@@ -8,7 +8,7 @@ export function DemoTourEnd({ onStartFeedback, onSkip }: Props) {
     <div style={{
       fontFamily: "'Nunito', sans-serif",
       background: '#F6FBFA',
-      minHeight: '844px', width: '390px',
+      minHeight: '100dvh', width: '390px',
       display: 'flex', flexDirection: 'column',
       padding: '0 24px',
     }}>
