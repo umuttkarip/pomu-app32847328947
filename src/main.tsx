@@ -4,7 +4,7 @@ import { App } from './App'
 import { Demo } from './demo/Demo'
 import { PhoneFrame } from './PhoneFrame'
 
-const isDemo = new URLSearchParams(window.location.search).has('demo');
+const isDemo = true;
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
