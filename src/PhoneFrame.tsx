@@ -19,6 +19,8 @@ function StatusBarClock() {
   return <span style={{ fontSize: 14, fontWeight: 600, color: '#264653', letterSpacing: 0.3 }}>{time}</span>;
 }
 
+// Masaüstünde (≥600px) telefon çerçevesi göster.
+// Mobilde direkt içerik render edilir.
 export function PhoneFrame({ children }: Props) {
   const screenW = 340;
   const screenH = 736;
@@ -26,48 +28,39 @@ export function PhoneFrame({ children }: Props) {
   const contentH = 844;
   const scale = screenW / contentW;
 
-  // Telefon gövdesi 370px genişlik — viewport'a göre scale et
-  const frameW = 370;
-  const frameH = 790;
-
   return (
     <>
       <style>{`
-        html, body {
-          margin: 0; padding: 0;
-          background: linear-gradient(135deg, #0f1923 0%, #1a2a3a 40%, #1e2d3d 100%) !important;
-          min-height: 100dvh;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        #root {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          min-height: 100dvh;
-          width: 100%;
-          padding: 16px 0;
-          box-sizing: border-box;
-        }
-        .phone-outer {
-          /* Viewport'a sığdır: genişlik veya yükseklik hangisi daha kısıtlayıcıysa */
-          --scale: min(
-            calc((100vw - 32px) / ${frameW}),
-            calc((100dvh - 32px) / ${frameH})
-          );
-          transform: scale(var(--scale));
-          transform-origin: center center;
-          flex-shrink: 0;
+        .phone-frame-desktop { display: none; }
+        .phone-frame-mobile  { display: block; }
+
+        @media (min-width: 600px) {
+          body {
+            background: linear-gradient(135deg, #0f1923 0%, #1a2a3a 40%, #1e2d3d 100%) !important;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+          }
+          #root {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            width: 100%;
+          }
+          .phone-frame-desktop { display: flex; align-items: center; justify-content: center; }
+          .phone-frame-mobile  { display: none !important; }
         }
       `}</style>
 
-      <div className="phone-outer">
-        {/* Telefon dış gövdesi */}
+      {/* Masaüstü: telefon çerçevesi */}
+      <div className="phone-frame-desktop">
         <div style={{
           position: 'relative',
-          width: frameW,
-          height: frameH,
+          width: 370,
+          height: 790,
           background: 'linear-gradient(145deg, #2C2C2E 0%, #1C1C1E 50%, #232323 100%)',
           borderRadius: 52,
           boxShadow: `
@@ -84,12 +77,10 @@ export function PhoneFrame({ children }: Props) {
           overflow: 'hidden',
           flexShrink: 0,
         }}>
-
           {/* Yan butonlar — sol */}
           <div style={{ position: 'absolute', left: -2.5, top: 128, width: 2.5, height: 28, borderRadius: '2px 0 0 2px', background: 'linear-gradient(180deg, #4A4A4C, #3A3A3C)' }} />
           <div style={{ position: 'absolute', left: -2.5, top: 172, width: 2.5, height: 52, borderRadius: '2px 0 0 2px', background: 'linear-gradient(180deg, #4A4A4C, #3A3A3C)' }} />
           <div style={{ position: 'absolute', left: -2.5, top: 234, width: 2.5, height: 52, borderRadius: '2px 0 0 2px', background: 'linear-gradient(180deg, #4A4A4C, #3A3A3C)' }} />
-          {/* Sağ — power */}
           <div style={{ position: 'absolute', right: -2.5, top: 182, width: 2.5, height: 64, borderRadius: '0 2px 2px 0', background: 'linear-gradient(180deg, #4A4A4C, #3A3A3C)' }} />
 
           {/* Ekran */}
@@ -112,16 +103,8 @@ export function PhoneFrame({ children }: Props) {
               padding: '14px 28px 0',
               pointerEvents: 'none',
             }}>
-              <div style={{ flex: 1 }}>
-                <StatusBarClock />
-              </div>
-              <div style={{
-                width: 120, height: 34,
-                background: '#000000',
-                borderRadius: 20,
-                position: 'relative', top: -2,
-                flexShrink: 0,
-              }} />
+              <div style={{ flex: 1 }}><StatusBarClock /></div>
+              <div style={{ width: 120, height: 34, background: '#000', borderRadius: 20, position: 'relative', top: -2, flexShrink: 0 }} />
               <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 5 }}>
                 <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
                   <rect x="0" y="8" width="3" height="4" rx="0.5" fill="#264653"/>
@@ -143,12 +126,7 @@ export function PhoneFrame({ children }: Props) {
             </div>
 
             {/* Uygulama içeriği */}
-            <div style={{
-              width: contentW,
-              height: contentH,
-              transform: `scale(${scale})`,
-              transformOrigin: 'top left',
-            }}>
+            <div style={{ width: contentW, height: contentH, transform: `scale(${scale})`, transformOrigin: 'top left' }}>
               {children}
             </div>
           </div>
@@ -158,6 +136,11 @@ export function PhoneFrame({ children }: Props) {
             <div style={{ width: 120, height: 5, background: 'rgba(255,255,255,0.35)', borderRadius: 3 }} />
           </div>
         </div>
+      </div>
+
+      {/* Mobil: direkt içerik */}
+      <div className="phone-frame-mobile">
+        {children}
       </div>
     </>
   );
