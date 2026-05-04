@@ -90,7 +90,7 @@ export function DemoFeedback({ name }: Props) {
       display: 'flex', flexDirection: 'column',
       overflowY: 'auto',
     }}>
-      <div style={{ padding: '56px 24px 24px' }}>
+      <div style={{ padding: '44px 24px 24px' }}>
         <div style={{ fontSize: 24, fontWeight: 800, color: '#264653', marginBottom: 8 }}>
           Birkaç kısa soru
         </div>

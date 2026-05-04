@@ -25,7 +25,7 @@ export function DemoStats({ onTabChange, onViewMemory }: Props) {
           50% { box-shadow: 0 0 0 8px rgba(246,176,137,0.08), 0 8px 24px rgba(159,201,195,0.24); }
         }
       `}</style>
-      <div style={{ padding: '56px 24px 8px', textAlign: 'center' }}>
+      <div style={{ padding: '44px 24px 8px', textAlign: 'center' }}>
         <div style={{ fontSize: 13, color: '#8BADA8', fontWeight: 600, marginBottom: 2 }}>İlerlemen</div>
         <div style={{ fontSize: 26, fontWeight: 800, color: '#264653' }}>İstatistikler</div>
       </div>

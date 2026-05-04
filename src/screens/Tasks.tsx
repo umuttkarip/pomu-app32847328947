@@ -190,7 +190,7 @@ export function Tasks({ onTabChange, onAddTask, onStartFocus, refreshKey }: Prop
       )}
 
       {/* Segment control */}
-      <div style={{ padding: '56px 24px 16px' }}>
+      <div style={{ padding: '44px 24px 16px' }}>
         <div style={{ display: 'flex', background: '#EAEFEF', borderRadius: 12, padding: 4, gap: 2 }}>
           {(['Bugün', 'Yakında', 'Tümü'] as Segment[]).map((label) => (
             <button key={label} onClick={() => setSegment(label)} style={{

@@ -30,7 +30,7 @@ export function DemoPomuReacts({ name, onChoice }: Props) {
       {/* Üst alan — Pomu okuma halinde */}
       <div style={{
         background: 'linear-gradient(145deg, #EDF6F4 0%, #FFFFFF 100%)',
-        padding: '56px 24px 32px',
+        padding: '44px 24px 32px',
         display: 'flex', flexDirection: 'column', alignItems: 'center',
       }}>
         <img src="/images/reading.png" alt="Pomu"

@@ -179,7 +179,7 @@ export function DemoSurvey({ name }: Props) {
       display: 'flex', flexDirection: 'column',
     }}>
       {/* Header */}
-      <div style={{ padding: '56px 24px 32px' }}>
+      <div style={{ padding: '44px 24px 32px' }}>
         <div style={{ fontSize: 12, color: '#AABCB8', fontWeight: 600, marginBottom: 8, letterSpacing: '0.06em' }}>
           {stepLabel}
         </div>

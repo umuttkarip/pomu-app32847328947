@@ -67,7 +67,7 @@ export function Stats({ onTabChange }: Props) {
       display: 'flex', flexDirection: 'column',
     }}>
       {/* Header */}
-      <div style={{ padding: '56px 24px 8px', textAlign: 'center' }}>
+      <div style={{ padding: '44px 24px 8px', textAlign: 'center' }}>
         <div style={{ fontSize: 13, color: '#8BADA8', fontWeight: 600, marginBottom: 2 }}>İlerlemen</div>
         <div style={{ fontSize: 26, fontWeight: 800, color: '#264653' }}>İstatistikler</div>
       </div>
