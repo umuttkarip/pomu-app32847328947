@@ -10,7 +10,7 @@ export function DemoFocusEnd({ onViewStats, onHome }: Props) {
     <div style={{
       fontFamily: "'Nunito', sans-serif",
       background: '#1E3A3A',
-      minHeight: '100dvh', width: '390px',
+      minHeight: '100dvh', height: '100%', width: '390px',
       display: 'flex', flexDirection: 'column', alignItems: 'center',
       justifyContent: 'center', gap: 16,
       position: 'relative', overflow: 'hidden',

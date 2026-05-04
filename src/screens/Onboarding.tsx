@@ -46,7 +46,7 @@ export function Onboarding({ onComplete }: Props) {
       <div style={{
         fontFamily: "'Nunito', sans-serif",
         background: 'linear-gradient(160deg, #D9EFEC 0%, #EDF6F4 40%, #F6FBFA 100%)',
-        minHeight: '100dvh', width: '390px',
+        minHeight: '100dvh', height: '100%', width: '390px',
         overflow: 'hidden', position: 'relative',
         display: 'flex', flexDirection: 'column', alignItems: 'center',
       }}>
@@ -117,7 +117,7 @@ export function Onboarding({ onComplete }: Props) {
       <div style={{
         fontFamily: "'Nunito', sans-serif",
         background: '#F6FBFA',
-        minHeight: '100dvh', width: '390px',
+        minHeight: '100dvh', height: '100%', width: '390px',
         overflow: 'hidden', position: 'relative',
         display: 'flex', flexDirection: 'column',
       }}>
@@ -201,7 +201,7 @@ export function Onboarding({ onComplete }: Props) {
     <div style={{
       fontFamily: "'Nunito', sans-serif",
       background: 'linear-gradient(180deg, #F6FBFA 0%, #EDF6F4 100%)',
-      minHeight: '100dvh', width: '390px',
+      minHeight: '100dvh', height: '100%', width: '390px',
       overflow: 'hidden', position: 'relative',
       display: 'flex', flexDirection: 'column', alignItems: 'center',
     }}>

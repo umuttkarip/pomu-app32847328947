@@ -153,7 +153,7 @@ export function DemoSurvey({ name }: Props) {
       <div style={{
         fontFamily: "'Nunito', sans-serif",
         background: '#F6FBFA',
-        minHeight: '100dvh', width: '390px',
+        minHeight: '100dvh', height: '100%', width: '390px',
         display: 'flex', flexDirection: 'column',
         alignItems: 'center', justifyContent: 'center',
         padding: '0 32px', textAlign: 'center', gap: 20,
@@ -175,7 +175,7 @@ export function DemoSurvey({ name }: Props) {
     <div style={{
       fontFamily: "'Nunito', sans-serif",
       background: '#F6FBFA',
-      minHeight: '100dvh', width: '390px',
+      minHeight: '100dvh', height: '100%', width: '390px',
       display: 'flex', flexDirection: 'column',
     }}>
       {/* Header */}

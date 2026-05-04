@@ -29,7 +29,7 @@ export function DemoProfile({ name, firstTimeReading, sessionChoice, onTabChange
     <div style={{
       fontFamily: "'Nunito', sans-serif",
       background: '#F6FBFA',
-      minHeight: '100dvh', width: '390px',
+      minHeight: '100dvh', height: '100%', width: '390px',
       display: 'flex', flexDirection: 'column',
       overflowY: 'auto',
     }}>

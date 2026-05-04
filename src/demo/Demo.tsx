@@ -233,7 +233,7 @@ export function Demo() {
 
   if (step === 'done') {
     return (
-      <div style={{ ...fade, fontFamily: "'Nunito', sans-serif", background: '#F6FBFA', minHeight: '100dvh', width: '390px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '0 32px', textAlign: 'center', gap: 20 }}>
+      <div style={{ ...fade, fontFamily: "'Nunito', sans-serif", background: '#F6FBFA', minHeight: '100dvh', height: '100%', width: '390px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '0 32px', textAlign: 'center', gap: 20 }}>
         <img src="/images/jumping.png" alt="Pomu" style={{ width: 120, height: 120, objectFit: 'contain' }} />
         <div style={{ fontSize: 24, fontWeight: 800, color: '#264653' }}>Teşekkürler!</div>
         <div style={{ fontSize: 15, color: '#8BADA8', fontWeight: 500, lineHeight: 1.6 }}>

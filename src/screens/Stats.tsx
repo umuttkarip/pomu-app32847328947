@@ -62,7 +62,7 @@ export function Stats({ onTabChange }: Props) {
     <div style={{
       fontFamily: "'Nunito', sans-serif",
       background: '#F6FBFA',
-      minHeight: '100dvh', width: '390px',
+      minHeight: '100dvh', height: '100%', width: '390px',
       overflow: 'hidden', position: 'relative',
       display: 'flex', flexDirection: 'column',
     }}>
